@@ -1,0 +1,23 @@
+.unit-toggle {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.unit-toggle button {
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.unit-toggle button.active {
+  background: #fff;
+  color: #0f172a;
+}
