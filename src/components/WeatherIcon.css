@@ -1,0 +1,18 @@
+.weather-icon {
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
+}
+
+.weather-icon-clear,
+.weather-icon-partly {
+  color: #ffd54a;
+}
+
+.weather-icon-storm {
+  color: #ffe066;
+}
+
+.weather-icon-clear.weather-icon-night,
+.weather-icon-partly.weather-icon-night {
+  color: #dfe6ff;
+}
