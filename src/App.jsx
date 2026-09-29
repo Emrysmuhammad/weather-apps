@@ -3,6 +3,7 @@ import { CloudSun } from 'lucide-react'
 import SearchBar from './components/SearchBar'
 import UnitToggle from './components/UnitToggle'
 import CurrentWeather from './components/CurrentWeather'
+import HourlyForecast from './components/HourlyForecast'
 import StatusMessage from './components/StatusMessage'
 import { useWeather } from './hooks/useWeather'
 import { useGeolocation } from './hooks/useGeolocation'
@@ -68,6 +69,9 @@ export default function App() {
                 isRefreshing={status === 'loading'}
                 onRefresh={refresh}
               />
+            <div className="span-2">
+                <HourlyForecast hours={weather.hours} unit={unit} />
+            </div>
             </div>
           </main>
         )}
