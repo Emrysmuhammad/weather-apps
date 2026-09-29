@@ -1,0 +1,69 @@
+.favorites {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.favorite-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.favorite-toggle:hover {
+  background: var(--glass-strong);
+}
+
+.favorite-toggle.saved {
+  background: #fff;
+  color: #0f172a;
+}
+
+.favorite-toggle.saved svg {
+  color: #f5a623;
+}
+
+.favorite-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.favorite-chip {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.favorite-chip.active {
+  background: var(--glass-strong);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.favorite-select {
+  padding: 8px 6px 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.favorite-remove {
+  display: grid;
+  place-items: center;
+  padding: 8px 10px 8px 4px;
+  color: var(--text-faint);
+}
+
+.favorite-remove:hover {
+  color: #fff;
+}
