@@ -9,6 +9,7 @@ import { useWeather } from './hooks/useWeather'
 import { useGeolocation } from './hooks/useGeolocation'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { describeWeather } from './utils/weatherCodes'
+import WeatherDetails from './components/WeatherDetails'
 
 const DEFAULT_LOCATION = {
   id: '2643743',
@@ -72,6 +73,8 @@ export default function App() {
             <div className="span-2">
                 <HourlyForecast hours={weather.hours} unit={unit} />
             </div>
+
+            <WeatherDetails current={weather.current} today={weather.days[0]} unit={unit} />
             </div>
           </main>
         )}
