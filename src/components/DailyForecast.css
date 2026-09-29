@@ -1,0 +1,56 @@
+.daily {
+  padding: 22px 24px;
+}
+
+.daily-item {
+  display: grid;
+  grid-template-columns: 54px 30px 40px 38px 1fr 38px;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.daily-item:last-child {
+  border-bottom: none;
+}
+
+.daily-day {
+  font-weight: 500;
+}
+
+.daily-rain {
+  font-size: 0.75rem;
+  color: var(--rain-blue);
+}
+
+.daily-min {
+  text-align: right;
+  color: var(--text-soft);
+}
+
+.daily-max {
+  font-weight: 600;
+}
+
+.daily-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.daily-range {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8fd8ff, #ffe082);
+}
+
+@media (max-width: 520px) {
+  .daily-item {
+    grid-template-columns: 46px 28px 34px 32px 1fr 32px;
+    gap: 8px;
+  }
+}
