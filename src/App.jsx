@@ -12,6 +12,7 @@ import { describeWeather } from './utils/weatherCodes'
 import WeatherDetails from './components/WeatherDetails'
 import DailyForecast from './components/DailyForecast'
 import FavoriteCities from './components/FavoriteCities'
+import Atmosphere from './components/Atmosphere'
 
 const DEFAULT_LOCATION = {
   id: '2643743',
@@ -59,6 +60,7 @@ export default function App() {
 
   return (
     <div className={`app${current && !current.isDay ? ' is-night' : ''}`} data-theme={theme}>
+      <Atmosphere theme={theme} />
       <div className="container">
         <header className="header">
           <div className="brand">

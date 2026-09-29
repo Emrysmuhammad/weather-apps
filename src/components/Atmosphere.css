@@ -1,0 +1,97 @@
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  top: -80px;
+  width: 1.5px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.55));
+  animation: fall linear infinite;
+}
+
+.flake {
+  position: absolute;
+  top: -12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  animation: drift linear infinite;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  animation: twinkle ease-in-out infinite;
+}
+
+.lightning {
+  position: absolute;
+  inset: 0;
+  animation: flash 7s infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(calc(100vh + 100px));
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(26px, 55vh);
+  }
+
+  100% {
+    transform: translate(-14px, calc(100vh + 20px));
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%,
+  91%,
+  100% {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  92% {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  93% {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  94% {
+    background: rgba(255, 255, 255, 0.38);
+  }
+
+  97% {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere {
+    display: none;
+  }
+}
